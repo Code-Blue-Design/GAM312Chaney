@@ -8,6 +8,7 @@
 #include "Resource_M.h"
 #include "Kismet/GameplayStatics.h"
 #include "BuildingPart.h"
+#include "PlayerWidget.h"
 #include "PlayerChar.generated.h"
 
 UCLASS()
@@ -92,6 +93,9 @@ public:
 
 	UPROPERTY()
 		ABuildingPart* spawnedPart;
+	// Creating the Player Widget for the Player Character for Health, Stamina, and Hunger
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UPlayerWidget* playerUI;
 
 	// Function for the Player Character's Stats and Resources
 	UFUNCTION(BlueprintCallable)

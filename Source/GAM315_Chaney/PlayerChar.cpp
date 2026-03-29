@@ -41,6 +41,8 @@ void APlayerChar::BeginPlay()
 void APlayerChar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	// Updating the Player Widget with the current stats for the Player Character
+	playerUI->UpdateBars(Health, Hunger, Stamina);
 
 	if (isBuilding)
 	{
